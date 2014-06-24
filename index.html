@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+
+</head>
+<body class="day">
+	<h1>My website</h1>
+	<button data-name="day">Day</button>
+	<button data-name="night">Night</button>
+  <button>Smecherie</button>
+</body>
+<script>
+	(function (){
+		var body = $('body');
+		 	button = $('button');
+		
+  		button.click(function() {
+  		var $this = $(this);
+  			stylesheet = $this.data('name');
+    	body.attr('class', stylesheet);
+    	$this.siblings('button')
+    		 .removeAttr('disabled')
+    		 .end()
+    		 .attr('disabled', 'disabled');
+  });
+})();
+</script>
+</html>
